@@ -1,0 +1,35 @@
+#!/bin/bash
+
+case "$1" in
+mac|"")
+    GOOS=darwin
+    GOARCH=amd64
+    ;;
+mac32)
+    GOOS=darwin
+    GOARCH=386
+    ;;
+linux)
+    GOOS=linux
+    GOARCH=amd64
+    ;;
+linux32)
+    GOOS=linux
+    GOARCH=386
+    ;;
+windows)
+    GOOS=windows
+    GOARCH=amd64
+    ;;
+windows32)
+    GOOS=windows
+    GOARCH=386
+    ;;
+esac
+
+export DOCKER_BUILDKIT=1
+
+docker build \
+    --build-arg "GOOS=$GOOS" \
+    --build-arg "GOARCH=$GOARCH" \
+    --no-cache --output ./ .
