@@ -15,7 +15,7 @@ a guideline.
 ## Motivation
 
 Since Mac OS no longer has Python installed.
-Also I'm not a Python programmer and I'm currently learning Go, I devided to
+Also I'm not a Python programmer and I'm currently learning Go, I decided to
 convert
 [gerry/decrypt_dbvis.py](https://gist.github.com/gerry/c4602c23783d894b8d96) to Go.
 
@@ -36,4 +36,4 @@ Check the `build` script to see the other options.
 
 ## Installation
 
-Simply move the compiled `decrypt-dbvis` to somewher in your $PATH.
+Simply move the compiled `decrypt-dbvis` to somewhere in your $PATH.
